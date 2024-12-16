@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/profesor-dashboard" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ usuario?.nombre || 'Perfil Profesor' }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="profile-card">
+    <img src="assets/icon/card_perfil.png" alt="Admin Profile Photo" class="profile-img">
+    <div class="profile-info">
+      <p><strong>RUT:</strong> {{ usuario?.rut }}</p>
+      <p><strong>Email:</strong> {{ usuario?.email }}</p>
+      <p><strong>Tipo de Usuario:</strong> {{ usuario?.tipo }}</p>
+    </div>
+  </div>
+</ion-content>

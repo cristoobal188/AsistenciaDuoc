@@ -1,0 +1,33 @@
+.edit-user-content {
+    --ion-background-color: #f4f4f4; 
+    padding: 16px;
+  }
+  
+  .edit-user-card {
+    background-color: white; 
+    border: 1px solid #0000007b; 
+    border-radius: 12px; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0); 
+  }
+  
+  ion-label, ion-input, ion-select {
+    color: black; 
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding: 15px;
+  }
+  
+  ion-button {
+    width: 100%; 
+    max-width: 200px;
+    color: white;
+  }
+
+  
+.input{
+    color: white;
+}

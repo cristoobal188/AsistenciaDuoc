@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/asignaturas-alumno" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalles del Profesor</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="profesor">
+    <ion-card-header>
+      <ion-card-title>{{ profesor.nombre }}</ion-card-title>
+      <ion-card-subtitle>{{ profesor.email }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      Profesor de la asignatura: {{ profesor.asignatura }}
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="!profesor">
+    <ion-card-content>
+      No se encontró profesor para esta asignatura.
+    </ion-card-content>
+  </ion-card>
+</ion-content>

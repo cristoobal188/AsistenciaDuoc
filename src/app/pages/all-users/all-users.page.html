@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/admin-dashboard" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Lista de Usuarios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="ion-padding">
+    <ion-card *ngFor="let usuario of usuarios">
+      <ion-card-content>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <table class="user-table">
+                <tr>
+                  <td class="title">Nombre:</td>
+                  <td class="data">{{ usuario.nombre }}</td>
+                </tr>
+                <tr>
+                  <td class="title">Rut:</td>
+                  <td class="data">{{ usuario.rut }}</td>
+                </tr>
+                <tr>
+                  <td class="title">Email:</td>
+                  <td class="data">{{ usuario.email }}</td>
+                </tr>
+                <tr>
+                  <td class="title">Tipo de Usuario:</td>
+                  <td class="data">{{ usuario.tipo }}</td>
+                </tr>
+              </table>
+            </ion-col>
+            <ion-col size="auto" class="align-right">
+              <ion-button color="primary" (click)="openUpdateModal(usuario)">Actualizar</ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

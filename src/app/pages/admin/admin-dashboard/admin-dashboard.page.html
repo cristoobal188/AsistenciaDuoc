@@ -1,0 +1,19 @@
+<ion-app>
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Admin - {{ usuario?.nombre }} {{ usuario?.apellido }}</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content class="ion-padding">
+      <p>Accede a las funcionalidades:</p>
+
+      <ion-button expand="block" routerLink="/perfil-admin">Mi Perfil</ion-button>
+
+      <ion-button expand="block" routerLink="/all-users">Todos los Usuarios</ion-button>
+
+      <ion-button expand="block" (click)="confirmLogout()">Cerrar Sesión</ion-button>
+    </ion-content>
+  </div>
+</ion-app>

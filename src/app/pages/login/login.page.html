@@ -1,0 +1,42 @@
+<ion-content>
+  <div class="login-container-wrapper">
+    <div class="login-container">
+      <img src="assets/icon/logo_duocuc.png" alt="Duoc UC Logo" class="logo">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Bienvenido AsistenciaDuocUc</ion-card-title>
+        </ion-card-header>
+        <ion-card-subtitle>Ingrese credenciales:</ion-card-subtitle>
+
+        <ion-card-content [formGroup]="loginForm">
+          <ion-item>
+            <ion-label position="stacked">Correo Electrónico:</ion-label>
+            <ion-input formControlName="email" type="email" placeholder="Ej: @duocuc.cl o @profesor.duoc.cl" color="dark"></ion-input>
+          </ion-item>
+          <ion-text position="stacked" color="danger" *ngIf="loginForm.get('email')?.hasError('required')">El email es requerido!.</ion-text>
+          <ion-text position="stacked" color="danger" *ngIf="loginForm.get('email')?.hasError('email')">El email es inválido!.</ion-text>
+          <ion-item>
+            <ion-label position="stacked">Contraseña:</ion-label>
+            <ion-input formControlName="password" type="password" placeholder="Ej: Hello123" color="dark"></ion-input>
+          </ion-item>
+          <ion-text position="stacked" color="danger" *ngIf="loginForm.get('password')?.hasError('required')">La contraseña es requerida!.</ion-text>
+          <ion-text position="stacked" color="danger" *ngIf="loginForm.get('password')?.hasError('minlength')">La contraseña debe tener 6 caracteres como mínimo.</ion-text>
+
+          <ion-button (click)="login()" expand="full" class="ion-margin-top yellow-button">Iniciar Sesión</ion-button>
+          <ion-text class="register-text ion-margin-top" style="color: #000000">
+            No tienes cuenta? <ion-button expand="block" routerLink="/register" fill="clear" size="small" class="register-button">Registrar Usuarios</ion-button>
+          </ion-text>
+          <ion-text class="register-text ion-margin-top" style="color: #000000">
+            ¿Olvidaste tu contraseña? <ion-button routerLink="/recuperar-contrasena" fill="clear" size="small" class="recuperar-button">Recuperar Contraseña</ion-button>
+          </ion-text>
+        </ion-card-content>
+        
+       
+        <ion-button (click)="cargarUsuariosAleatorios()" expand="full" class="crear-cuentas-btn yellow-button">
+          Crear Cuentas Aleatorias
+        </ion-button>
+        
+      </ion-card>
+    </div>
+  </div>
+</ion-content>

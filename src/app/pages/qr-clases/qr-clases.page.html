@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/alumno-dashboard" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Generar Código QR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="qr-container">
+    <ion-button expand="block" class="generate-button" (click)="generarQR()">Generar Código QR</ion-button>
+    <div *ngIf="mostrarQR" class="qr-image-container">
+      <img src="assets/icon/qr.jpg" alt="Código QR Simulado" />
+    </div>
+  </div>
+</ion-content>

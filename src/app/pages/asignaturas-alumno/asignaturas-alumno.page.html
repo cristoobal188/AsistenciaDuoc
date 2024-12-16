@@ -1,0 +1,71 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/alumno-dashboard" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Asignaturas Alumno</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-header collapse="condense">
+    <ion-toolbar color="primary">
+      <ion-title size="large">Asignaturas</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-card class="asignatura-card">
+          <ion-card-header>
+            <ion-card-title class="asignatura-title">Consulta Base de Datos</ion-card-title>
+            <ion-card-subtitle class="asignatura-subtitle">Sección: MDY2131</ion-card-subtitle>
+            <ion-card-subtitle class="asignatura-subtitle">Fecha: Lunes Y Miercoles</ion-card-subtitle>
+            <ion-card-subtitle class="asignatura-subtitle">Hora: 11:30 a 12:50</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-button expand="block" routerLink="/profesor-detalle/Consulta Base de Datos">
+              Ver Profesor
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="12">
+        <ion-card class="asignatura-card">
+          <ion-card-header>
+            <ion-card-title class="asignatura-title">Diseño y Gestión de Requisitos</ion-card-title>
+            <ion-card-subtitle class="asignatura-subtitle">Sección: PRY1111</ion-card-subtitle>
+            <ion-card-subtitle class="asignatura-subtitle">Fecha: Martes y Jueves</ion-card-subtitle>
+            <ion-card-subtitle class="asignatura-subtitle">Hora: 8:30 a 9:50</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-button expand="block" routerLink="/profesor-detalle">
+              Ver Profesor
+            </ion-button>                      
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="12">
+        <ion-card class="asignatura-card">
+          <ion-card-header>
+            <ion-card-title class="asignatura-title">Arquitectura</ion-card-title>
+            <ion-card-subtitle class="asignatura-subtitle">Sección: ASY4131</ion-card-subtitle>
+            <ion-card-subtitle class="asignatura-subtitle">Fecha: Jueves y Viernes</ion-card-subtitle>
+            <ion-card-subtitle class="asignatura-subtitle">Hora: 13:00 a 14:20</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-button expand="block" routerLink="/profesor-detalle">
+              Ver Profesor
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div class="logo-container">
+    <img src="assets/icon/logo_duocuc.png" class="logo" alt="DuocUc Logo" />
+  </div>
+</ion-content>
